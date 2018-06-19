@@ -1,0 +1,17 @@
+loader 加载程序
+
+一、loader的使用： loader速览表：https://blog.csdn.net/keliyxyz/article/details/51649429
+  1.css loader
+    1)安装
+      cnpm install style-loader css-loader -S
+    2)配置 webpack.config.js
+      module: {
+        rules: [
+          { test:/\.css$/, use: ['style-loader','css-loader'] }
+        ]
+      }
+  2.图片文件 loader
+    1)安装
+      cnpm install file-loader -S
+    2)配置
+      { test:/\.(jpg|png|jpeg)$/, use: 'file-loader' }
