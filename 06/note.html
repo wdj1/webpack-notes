@@ -1,0 +1,25 @@
+plugin
+
+一、html-webpack-plugin 的使用
+  1.安装
+    cnpm install html-webpack-plugin -S
+  2.配置
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+  module.exports = {
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './src/index.html',
+        minify: {
+        //去除引号
+        removeAttributeQuotes: true,
+        //去除注释
+        removeComments: true,
+        //去除空属性
+        removeEmptyAttributes: true,
+        //去除空格
+        collapseWhitespace:true
+        }
+      })
+    ]
+  }
