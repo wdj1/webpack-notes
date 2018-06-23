@@ -1,0 +1,17 @@
+output 文件夹配置
+
+module.exports = {
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    //把js文件 存放至dist/js文件夹中
+    filename: 'js/main.js'
+  },
+  module: {
+    rules: [
+      { 
+        test:/\.(jpg|png|jpeg)$/,
+        //把图片文件 存放至dist/img文件夹中
+        use: 'file-loader?name=./img/[name].[ext]' 
+      }
+    ]
+  }
